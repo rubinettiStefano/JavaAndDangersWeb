@@ -1,0 +1,7 @@
+create database javaanddangersweb;
+
+#DOPO AVER RUNNATO IL PROGRAMMA
+INSERT INTO javaanddangersweb.pg (id, alignment, dob, nickname, pg_class, race, avatar_url) VALUES (1, 'GOOD', '2025-03-30', 'Erminio Andato', 'MONK', 'HOBBIT', 'https://lh6.googleusercontent.com/proxy/Z-c-54fU_dS2ITSDSXv7MgmX0-qHsS-qph1oA7u889-jgiRQOTj2C74TVo0RmPJrS_jtwGuaFSP0OmWNNTU6PDOy3XmBcp87edg03Lz8GYvMDx5GqHR8-6g');
+INSERT INTO javaanddangersweb.pg (id, alignment, dob, nickname, pg_class, race, avatar_url) VALUES (2, 'EVIL', '2007-08-27', 'Heimdall', 'PALADIN', 'ORK', 'https://i.imgur.com/qmCvFrC.jpeg');
+INSERT INTO javaanddangersweb.pg (id, alignment, dob, nickname, pg_class, race, avatar_url) VALUES (3, 'NEUTRAL', '1950-11-12', 'Ninho Frassica', 'BRAWLER', 'HOBGOBLIN', 'https://i.imgur.com/6SoOu0I.png');
+INSERT INTO javaanddangersweb.pg (id, alignment, dob, nickname, pg_class, race, avatar_url) VALUES (4, 'EVIL', '2025-03-31', 'Crazy Sandro', 'CLERIC', 'ELF', 'https://i.imgur.com/zU9vwZ0.png');
