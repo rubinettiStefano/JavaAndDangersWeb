@@ -3,27 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        /*
+            Prevede un target e delle regole da applicare su di esso
+         */
+        body
+        {
+            background-color: #2e3053;/* HEXCODE per colori */
+            color: white;
+        }
+
+        div
+        {
+            border-color: white;
+            border-style: solid ;
+            border-width: 2px;
+            padding: 10px;
+
+        }
+
+        /*Applica la regola a tutti gli elementi di tipo p CONTENUTI nell'elemento con id="ilDiv" */
+        #ilDiv p
+        {
+            font-family: NSimSun;
+        }
+
+        h1
+        {
+            background-color: green;
+        }
+
+        a
+        {
+            text-decoration: none;
+            cursor: default;
+        }
+
+        /*STO TARGETTIZZANDO TUTTI GLI ELEMENTI DI TIPO P */
+        p
+        {
+            font-size: large;
+            font-family: "Comic Sans MS";
+        }
+
+        /*STO TARGETTIZZANDO elementi con class="nonSecondo" */
+        .nonSecondo
+        {
+            font-family: Carlito;
+        }
+
+
+        /*STO TARGETTIZZANDO elemento con id="secondoParagrafo" */
+        #secondoParagrafo
+        {
+            font-size: 25px;
+            color: burlywood;
+        }
+
+        #primo
+        {
+            font-family: Bahnschrift;
+        }
+
+        #gioco
+        {
+            border-color: black;
+            border-style: solid ;
+            border-width: 2px;
+
+            padding-top: 20px;
+            margin-top: 50px;
+            margin-left: 30px;
+        }
+
+    </style>
 </head>
 <body>
-  <h1>BENVENUTI NELLA GILDA DELLA GRAFICA BRUTTA</h1>
+  <h1 style="font-family: 'DejaVu Serif';padding: 10px 15px 20px 25px">BENVENUTI NELLA GILDA DELLA GRAFICA BRUTTA</h1>
     <!-- Per fare i siti con gli ads obbligatori -->
-  <a style="text-decoration: none;color: black;cursor: default" href="/pglist">
+  <a  href="/pglist">cliccami</a>
 
-  <p>
+  <p id="primo" style="font-family: 'DejaVu Serif'" class="nonSecondo">
       La Gilda della Brutta Grafica nacque in una taverna ai margini di un regno dimenticato. Tra una pinta di idromele e l’altra, un manipolo di avventurieri decise di unire le forze, non per le straordinarie abilità nel combattimento o per la loro intelligenza strategica, bensì per la passione comune di creare orribili illustrazioni. Dalle pareti di quella polverosa locanda pendevano disegni infantili di draghi, mappe pasticciate e stemmi dalle forme grottesche che, in qualche modo, scatenavano un bizzarro senso di orgoglio nei cuori di questi artisti maldestri.
   </p>
-
-  <p>
+  <p id="secondoParagrafo">
       Nel corso degli anni, i membri della Gilda si sono avventurati ovunque, esplorando sotterranei dimenticati e foreste incantate, lasciando il loro marchio inequivocabile: graffiti di dubbio gusto e loghi stropicciati. Le loro missioni non sempre avevano successo, ma nessuno poteva negare che ogni regno visitato si ricordasse benissimo di loro. Talvolta venivano derisi, altre volte additati come “i peggiori disegnatori del continente”, eppure i loro capolavori malriusciti riuscivano immancabilmente a strappare un sorriso anche al più gelido dei tiranni.
   </p>
-
-
-  <p>
+  <p class="nonSecondo">
       Ciò che rendeva la Gilda della Brutta Grafica unica era lo spirito di collaborazione che nasceva da ogni linea storta e da ogni sfumatura improvvisata. Pur conoscendo i propri limiti nel disegno, i membri non smettevano mai di migliorarsi, conquistando dungeon e cuori lungo il cammino. Alla fine, ciò che li univa non era la bravura artistica, ma la gioia di condividere storie, fallimenti e piccole vittorie colorate con chiunque fosse disposto ad ascoltarli (o a sopportare le loro illustrazioni inguardabili).
   </p>
 
-  </a>
+
+    <p id="gioco">SONO IL CONTENUTO DI UNO SPAN</p>
+
+    <div id="ilDiv">
+        <a style="color: chartreuse" href="https://divinacommedia.weebly.com/inferno-canto-i.html">LINK PER DIVINA COMMEDIA</a>
+        <p>Nel mezzo del cammin di nostra vita
+            mi ritrovai per una selva oscura,
+            ché la diritta via era smarrita.</p>
+        <p>Allor fu la paura un poco queta,
+            che nel lago del cor m’era durata
+            la notte ch’i’ passai con tanta pieta. </p>
+
+        <p>Questi parea che contra me venisse
+            con la test’alta e con rabbiosa fame,
+            sì che parea che l’aere ne tremesse</p>
 
 
+    </div>
 </body>
 </html>

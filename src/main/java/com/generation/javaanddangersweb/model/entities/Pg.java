@@ -114,15 +114,5 @@ public class Pg extends BaseEntity
 		return Period.between(dob,LocalDate.now()).getYears();
 	}
 
-	//TODO 7 - Riempire i metodi getWeapons e getArmors
-	//FILTRATE con INSTANCEOF
-	public List<Weapon> getWeapons()
-	{
-		return null;
-	}
 
-	public List<Armor> getArmors()
-	{
-		return null;
-	}
 }
