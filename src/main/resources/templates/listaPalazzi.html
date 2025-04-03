@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PgList</title>
+</head>
+<body>
+<h1>LISTA DI PALAZZI</h1>
+<a href="/formPalazzi">AGGIUNGI PALAZZO</a>
+<table border="1">
+    <tr> <!--Table row, una riga -->
+        <th> </th> <!--Table header,nome della colonna -->
+        <th>Id</th> <!--Table header,nome della colonna -->
+        <th>Indirizzo</th>
+        <th>Piani</th>
+        <th>Costruzione</th>
+        <th>Tetto</th>
+    </tr>
+    <tr th:each="p : ${palazzi}">
+        <td>
+<!--            <a th:href="@{/pgDetail(id=${p.id})}">&lt;!&ndash; il tuo url è /pgDetail?id=3 &ndash;&gt;-->
+                <img width="64" height="64" th:src="${p.imgUrl}" />
+<!--            </a>-->
+        </td>
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.indirizzo}"></td>
+        <td th:text="${p.numeroPiani}"></td>
+        <td th:text="${p.dataCostruzione}"></td>
+        <td th:text="${p.tetto}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>

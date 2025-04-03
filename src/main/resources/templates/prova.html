@@ -3,11 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        /*classe*/
+       .sezione
+       {
+           color: red !important;
+       }
+
+        /*tipo*/
+       p
+       {
+           color: blue;
+       }
+
+        /*classe*/
+       .verde
+       {
+           color: green; /* Ciò che è important può essere sovrascritto solo da altri important */
+        }
+
+        /*id*/
+        #arancione
+        {
+            color: orange;
+        }
+
+        /* possiamo definire più target contemporaneamente dividendoli con virgola */
+        .titoloGrande, .grande
+        {
+            font-size: larger;
+        }
+
+        /*con lo spazio definiamo come target quello dentro il primo
+        .sezione button
+        {
+            background-color: fuchsia;
+        }*/
+
+        /*con lo spazio definiamo come target quello direttamente dentro il primo */
+        .sezione>button
+        {
+            background-color: fuchsia;
+        }
+    </style>
+
+
 </head>
 <body>
-    <h1>CIAO SONO PROVA</h1>
-    <a href="/">
-        <img width="300" height="200"  src="https://static7.depositphotos.com/1252160/758/i/450/depositphotos_7588755-stock-photo-ugly-house.jpg" />
-    </a>
+
+
+    <div class="sezione">
+        <h1 class="titoloGrande">Titolo</h1>
+        <p style="color: purple" id="arancione" class="verde grande">Paragrafo 1</p>
+            <button>BOTTONE 1</button>
+
+    </div>
+
+    <button>BOTTONE 2</button>
+
+
 </body>
 </html>

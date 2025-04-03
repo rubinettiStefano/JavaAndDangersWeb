@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input,select
+        {
+            margin-bottom: 10px;
+        }
+
+        div
+        {
+            margin-left: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>FORM AGGIUNTA PALAZZO</h1>
+        <a href="/palazzi">TORNA LISTA</a>
+        <!-- action definisce URI e method il verbo -->
+        <form action="/formPalazzi" method="post" onsubmit="alert('Palazzo Creato')">
+            <input name="indirizzo" placeholder="indirizzo"  /><br/>
+            <input name="numeroPiani" type="number"  placeholder="piani" /><br/>
+            <input name="dataCostruzione" type="date"  title="Data di Costruzione" /><br/>
+            <select name="tetto">
+                <option value="">Tipo Tetto</option>
+                <option value="SPIOVENTE">Spiovente</option>
+                <option value="SOLARE">Solare</option>
+                <option value="PIATTO">Piatto</option>
+            </select><br/>
+            <input name="imgUrl" type="url"  placeholder="url immagine" /><br/>
+            <input  name="comando" type="submit" value="CREA E TORNA PAGINA PALAZZI">
+            <input name="comando" type="submit" value="CREA E RICREA">
+        </form>
+    </div>
+
+
+</body>
+</html>
