@@ -18,9 +18,9 @@
     </tr>
     <tr th:each="p : ${palazzi}">
         <td>
-<!--            <a th:href="@{/pgDetail(id=${p.id})}">&lt;!&ndash; il tuo url è /pgDetail?id=3 &ndash;&gt;-->
+            <a th:href="@{/palazzoDetail(id=${p.id})}"><!-- il tuo url è /pgDetail?id=3 -->
                 <img width="64" height="64" th:src="${p.imgUrl}" />
-<!--            </a>-->
+            </a>
         </td>
         <td th:text="${p.id}"></td>
         <td th:text="${p.indirizzo}"></td>

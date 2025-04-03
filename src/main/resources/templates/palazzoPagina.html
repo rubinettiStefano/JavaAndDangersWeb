@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Palazzo</h1>
+<h3>Id <span th:text="${palazzo.id}"></span></h3>
+<h3>Indirizzo <span th:text="${palazzo.indirizzo}"></span></h3>
+<h3>Data <span th:text="${palazzo.dataCostruzione}"></span></h3>
+<h3>Piani <span th:text="${palazzo.numeroPiani}"></span></h3>
+
+
+  <h2>Appartamenti</h2>
+
+  <table border="1">
+    <tr> <!--Table row, una riga -->
+      <th>Id</th> <!--Table header,nome della colonna -->
+      <th>Targhetta</th>
+    </tr>
+    <tr th:each="p : ${palazzo.appartamenti}">
+      <td th:text="${p.id}"></td>
+      <td th:text="${p.targhetta}"></td>
+    </tr>
+  </table>
+
+<br/>
+<br/>
+<h2>Form Creazione Appartamento</h2>
+  <form action="/creaAppartamento" method="post">
+    <input name="targhetta" placeholder="Inserisci targhetta" />
+
+    <input type="hidden" name="idPalazzo" th:value="${palazzo.id}" >
+    <input type="submit" value="CREA"/>
+  </form>
+
+</body>
+</html>

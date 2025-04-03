@@ -1,6 +1,8 @@
 package com.generation.javaanddangersweb.controller;
 
+import com.generation.javaanddangersweb.model.dao.AppartamentoDao;
 import com.generation.javaanddangersweb.model.dao.PalazzoDao;
+import com.generation.javaanddangersweb.model.entities.Appartamento;
 import com.generation.javaanddangersweb.model.entities.Palazzo;
 import com.generation.javaanddangersweb.model.entities.TipoTetto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ public class ControllerPalazzi
 
 	@Autowired
 	PalazzoDao dao;
+	@Autowired
+	AppartamentoDao aDao;
 
 	//URI -> /formPalazzi e VERBO POST
 	@PostMapping("/formPalazzi")
@@ -53,6 +57,38 @@ public class ControllerPalazzi
 	{
 		m.addAttribute("palazzi",dao.findAll());
 		return "listaPalazzi";
+	}
+
+	@GetMapping("/palazzoDetail")
+	public String mostraSingolo(Model m,@RequestParam Long id)
+	{
+		m.addAttribute("palazzo",dao.findById(id).orElse(null));
+		return "palazzoPagina";
+	}
+
+	@PostMapping("/creaAppartamento")
+	public String creaAppartamento
+	(
+			@RequestParam String targhetta,
+			@RequestParam Long idPalazzo
+	)
+	{
+
+		//legge dal db il padre grazie al suo id
+		Palazzo p = dao.findById(idPalazzo).orElse(null);
+
+		//crea il figlio con i campi riempiti
+		Appartamento a= new Appartamento();
+		a.setTarghetta(targhetta);
+		//collega il figlio al padre
+		a.setPalazzo(p);
+
+		//lo salva nel db
+		aDao.save(a);
+
+		//Qui chiamo il metodo mappato a palazzoDetail passandogli anche come parametro l'id
+		return "redirect:/palazzoDetail?id="+idPalazzo;
+
 	}
 
 	//URI -> /formPalazzi e VERBO GET

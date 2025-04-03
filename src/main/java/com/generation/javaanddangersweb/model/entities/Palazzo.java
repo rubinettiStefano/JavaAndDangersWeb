@@ -1,11 +1,10 @@
 package com.generation.javaanddangersweb.model.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Palazzo extends BaseEntity
@@ -17,6 +16,9 @@ public class Palazzo extends BaseEntity
 	@Enumerated(EnumType.STRING)
 	private TipoTetto tetto;
 	private String imgUrl;
+
+	@OneToMany(mappedBy = "palazzo",fetch = FetchType.EAGER)
+	private List<Appartamento> appartamenti;
 
 	public String getIndirizzo()
 	{
@@ -66,5 +68,15 @@ public class Palazzo extends BaseEntity
 	public void setImgUrl(String imgUrl)
 	{
 		this.imgUrl = imgUrl;
+	}
+
+	public List<Appartamento> getAppartamenti()
+	{
+		return appartamenti;
+	}
+
+	public void setAppartamenti(List<Appartamento> appartamenti)
+	{
+		this.appartamenti = appartamenti;
 	}
 }
